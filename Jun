@@ -561,10 +561,10 @@ red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
             child:Emit(1) -- Emit 20 particles
         end
         end
-        wait(1.8)
+        wait(1.4)
         red4:Destroy()
 
-task.wait(0.5)
+task.wait(0.1)
 local collateral1 = game.ReplicatedStorage.Resources.KJEffects["spinnyweenyspinner"].Attachment:Clone()
 collateral1.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
     for _, child in ipairs(collateral1:GetChildren()) do
