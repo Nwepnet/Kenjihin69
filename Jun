@@ -374,7 +374,13 @@ local AnimAnim2 = Instance.new("Animation")
 AnimAnim2.AnimationId = "rbxassetid://15957361339"
  
 local Anim2 = Humanoid:LoadAnimation(AnimAnim2)
- 
+local collateral3 = game.ReplicatedStorage.Resources.KJEffects["spinnerthing"].spinningparty:Clone()
+collateral3.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+    for _, child in ipairs(collateral3:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(20) -- Emit 20 particles
+        end
+    end 
  
 local startTime = 0
  
