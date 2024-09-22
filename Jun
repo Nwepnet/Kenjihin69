@@ -343,7 +343,6 @@ Anim2.TimePosition = startTime
  
 Anim2:AdjustSpeed(200)
 
-
     end
 
 end
@@ -459,10 +458,7 @@ local AnimAnim2 = Instance.new("Animation")
  
 AnimAnim2.AnimationId = "rbxassetid://15957361339"
  
-
- 
 local startTime = 0
- 
  
 Anim:Stop()
  
