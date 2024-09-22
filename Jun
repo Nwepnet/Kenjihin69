@@ -813,7 +813,7 @@ emitParticles(clonedJumpFX)
 positionOnFloor(clonedJumpFX)
 
 
-Wait(3.5)
+Wait(1.3)
                         local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
 red4.Parent = game.Players.LocalPlayer.Character["Head"]
     for _, child in ipairs(red4:GetChildren()) do
