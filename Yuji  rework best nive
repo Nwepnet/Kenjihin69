@@ -151,67 +151,44 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
--- Aqua color sequence (cyan and light blue)
-local aqua = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 255, 255)), -- cyan
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(127, 255, 212)) -- light aqua
-}
-
-local fx4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
-fx4.Parent = game.Players.LocalPlayer.Character["Head"]
-for _, child in ipairs(fx4:GetChildren()) do
-    if child:IsA("ParticleEmitter") then
-        child.Color = aqua -- Change particle color to aqua
-        child:Emit(20) -- Emit 20 particles
-    end
+local function stringToCFrame(str)
+	local components = {str:match("([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+)")}
+	for i = 1, #components do
+		components[i] = tonumber(components[i])
+	end
+	return CFrame.new(unpack(components))
 end
-
-local fx5 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.Attachment:Clone()
-fx5.Parent = game.Players.LocalPlayer.Character["Left Arm"]
-for _, child in ipairs(fx5:GetChildren()) do
-    if child:IsA("ParticleEmitter") then
-        child.Color = aqua -- Change particle color to aqua
-        child:Emit(20) -- Emit 20 particles
-    end
-end
-
-local fx6 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.a:Clone()
-fx6.Parent = game.Players.LocalPlayer.Character["Left Arm"]
-for _, child in ipairs(fx6:GetChildren()) do
-    if child:IsA("ParticleEmitter") then
-        child.Color = aqua -- Change particle color to aqua
-        child:Emit(20) -- Emit 20 particles
-    end
-end
-
-local fx7 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
-fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
-for _, child in ipairs(fx7:GetChildren()) do
-    if child:IsA("ParticleEmitter") then
-        child.Color = aqua -- Change particle color to aqua
-        child:Emit(1) -- Emit 1 particle
-    end
-end
-wait(0.3)
-        fx7:Destroy()
-
-task.wait(0.6)
-
-local final1 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-final1.Parent = game.Players.LocalPlayer.Character["Head"]
-for _, child in ipairs(final1:GetChildren()) do
-    if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-        child:Emit(50) -- Emit 1 particles
-    end
-end
-local final4 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-final4.Parent = game.Players.LocalPlayer.Character["Torso"]
-    for _, child in ipairs(final4:GetChildren()) do
+ 
+                        local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
+red4.Parent = game.Players.LocalPlayer.Character["Head"]
+    for _, child in ipairs(red4:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-            child:Emit(3) -- Emit 1 particles
+            child:Emit(20) -- Emit 20 particles
         end
-    end
-
+        end
+                local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.Attachment:Clone()
+red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+    for _, child in ipairs(red4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(20) -- Emit 20 particles
+        end
+        end
+local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.a:Clone()
+red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+    for _, child in ipairs(red4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(20) -- Emit 20 particles
+        end
+        end
+                local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
+red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+    for _, child in ipairs(red4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+        end
+        wait(0.5)
+        red4:Destroy()       
     end
 
 end
