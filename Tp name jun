@@ -67,7 +67,7 @@ local baseButton = hotbarFrame:FindFirstChild("4").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "???"
+ToolName.Text = "Speed Samurai Sword"
 
 
 local Players = game:GetService("Players")
