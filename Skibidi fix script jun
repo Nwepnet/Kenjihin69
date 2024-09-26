@@ -1544,7 +1544,6 @@ player.CharacterAdded:Connect(function(newCharacter)
     end
 
 end)
-
 humanoid.AnimationPlayed:Connect(onAnimationTrackStarted)
 
 local screenGui = Instance.new("ScreenGui")
@@ -1557,7 +1556,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
     textLayer.Size = UDim2.new(0, 300, 0, 50)  -- adjust the size of za text
     textLayer.Position = UDim2.new(0.5, -150 + offsetX, 0.2, offsetY)  -- apply offsets
     textLayer.AnchorPoint = Vector2.new(0.5, 0.5)  -- centert za text
-    textLayer.Text = "credits by tp exploits on discord"
+    textLayer.Text = "credits to tp exploit on discord"
     textLayer.TextColor3 = color  -- color for za layer
     textLayer.TextSize = 18
     textLayer.Font = Enum.Font.IndieFlower  -- setting font to Indie Flower
@@ -1585,7 +1584,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
     textLayer.Size = UDim2.new(0, 300, 0, 50)  -- adjust the size of za text
     textLayer.Position = UDim2.new(0.5, -150 + offsetX, 0.2, offsetY)  -- apply offsets
     textLayer.AnchorPoint = Vector2.new(0.5, 0.5)  -- centert za text
-    textLayer.Text = "credits by tp exploit on discord"
+    textLayer.Text = "credits to tp exploit on discord"
     textLayer.TextColor3 = color  -- color for za layer
     textLayer.TextSize = 18
     textLayer.Font = Enum.Font.IndieFlower  -- setting font to Indie Flower
@@ -1602,4 +1601,4 @@ createTextLayer(screenGui, 1, 1, Color3.new(0, 0, 0))   -- Bottom-right
 
 -- creating za main text for credititing
 local textLabel = createTextLayer(screenGui, 0, 0, Color3.new(1, 1, 1)) -- whit main text
-textLabel.ZIndex = 2  -- main text is on top
+textLabel.ZIndex = 1  -- main text is on top
