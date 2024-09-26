@@ -1567,7 +1567,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
 end
 
 -- thickness (blackoutline dudeshit)
-createTextLayer(screenGui, -1, -1, Color3.new(0, 0, 0)) -- Top-left
+createTextLayer(screenGui, -1, -1, Color3.new(9, 9, 9)) -- Top-left
 createTextLayer(screenGui, 1, -1, Color3.new(0, 0, 0))  -- Top-right
 createTextLayer(screenGui, -1, 1, Color3.new(0, 0, 0))  -- Bottom-left
 createTextLayer(screenGui, 1, 1, Color3.new(0, 0, 0))   -- Bottom-right
@@ -1595,7 +1595,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
 end
 
 -- thickness (blackoutline dudeshit)
-createTextLayer(screenGui, -1, -1, Color3.new(1, 1, 1)) -- Top-left
+createTextLayer(screenGui, -1, -1, Color3.new(9, 9, 9)) -- Top-left
 createTextLayer(screenGui, 1, -1, Color3.new(0, 0, 0))  -- Top-right
 createTextLayer(screenGui, -1, 1, Color3.new(0, 0, 0))  -- Bottom-left
 createTextLayer(screenGui, 1, 1, Color3.new(0, 0, 0))   -- Bottom-right
