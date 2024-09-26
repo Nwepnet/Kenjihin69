@@ -1168,7 +1168,7 @@ red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
             child:Emit(1) -- Emit 20 particles
         end
         end
-        wait(1.8)
+        wait(0.7)
         red4:Destroy()
 
 task.wait(0.1)
