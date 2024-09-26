@@ -542,12 +542,12 @@ task.wait(0.3)
 
 local AnimAnim2 = Instance.new("Animation")
 
-AnimAnim2.AnimationId = "rbxassetid://12447707844"
+AnimAnim2.AnimationId = "rbxassetid://14056370647"
 
 local Anim2 = Humanoid:LoadAnimation(AnimAnim2)
 
 
-local startTime = 0
+local startTime = 2
 
 
 Anim:Stop()
