@@ -1557,7 +1557,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
     textLayer.Size = UDim2.new(0, 300, 0, 50)  -- adjust the size of za text
     textLayer.Position = UDim2.new(0.5, -150 + offsetX, 0.2, offsetY)  -- apply offsets
     textLayer.AnchorPoint = Vector2.new(0.5, 0.5)  -- centert za text
-    textLayer.Text = "credits by tp exploit jun suggestion by smasthebest8"
+    textLayer.Text = "credits by tp exploits on discord"
     textLayer.TextColor3 = color  -- color for za layer
     textLayer.TextSize = 18
     textLayer.Font = Enum.Font.IndieFlower  -- setting font to Indie Flower
@@ -1567,7 +1567,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
 end
 
 -- thickness (blackoutline dudeshit)
-createTextLayer(screenGui, -1, -1, Color3.new(9, 9, 9)) -- Top-left
+createTextLayer(screenGui, -1, -1, Color3.new(0, 0, 0)) -- Top-left
 createTextLayer(screenGui, 1, -1, Color3.new(0, 0, 0))  -- Top-right
 createTextLayer(screenGui, -1, 1, Color3.new(0, 0, 0))  -- Bottom-left
 createTextLayer(screenGui, 1, 1, Color3.new(0, 0, 0))   -- Bottom-right
@@ -1585,7 +1585,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
     textLayer.Size = UDim2.new(0, 300, 0, 50)  -- adjust the size of za text
     textLayer.Position = UDim2.new(0.5, -150 + offsetX, 0.2, offsetY)  -- apply offsets
     textLayer.AnchorPoint = Vector2.new(0.5, 0.5)  -- centert za text
-    textLayer.Text = "credits by tp exploit jun suggestion by smasthebest8"
+    textLayer.Text = "credits by tp exploit on discord"
     textLayer.TextColor3 = color  -- color for za layer
     textLayer.TextSize = 18
     textLayer.Font = Enum.Font.IndieFlower  -- setting font to Indie Flower
@@ -1595,7 +1595,7 @@ local function createTextLayer(parent, offsetX, offsetY, color)
 end
 
 -- thickness (blackoutline dudeshit)
-createTextLayer(screenGui, -1, -1, Color3.new(9, 9, 9)) -- Top-left
+createTextLayer(screenGui, -1, -1, Color3.new(0, 0, 0)) -- Top-left
 createTextLayer(screenGui, 1, -1, Color3.new(0, 0, 0))  -- Top-right
 createTextLayer(screenGui, -1, 1, Color3.new(0, 0, 0))  -- Bottom-left
 createTextLayer(screenGui, 1, 1, Color3.new(0, 0, 0))   -- Bottom-right
