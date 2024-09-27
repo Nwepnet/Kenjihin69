@@ -905,7 +905,7 @@ Anim:AdjustSpeed(0)
 
 Anim:AdjustSpeed(0.4)
 local boom1 = game.ReplicatedStorage.Resources.KJEffects["ImpactEffect2"].Attachment:Clone()
-boom1.Parent = game.Players.LocalPlayer.Character["Torso"]
+boom1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
     for _, child in ipairs(boom1:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
             child:Emit(20) -- Emit 20 particles
@@ -1239,7 +1239,7 @@ hit1.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
         end
     end
 
-task.wait(1.4)
+task.wait(1.1)
 local final6 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
         final6.Parent = game.Players.LocalPlayer.Character["Head"]
             for _, child in ipairs(final6:GetChildren()) do
