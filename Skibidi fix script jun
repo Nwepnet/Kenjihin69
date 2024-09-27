@@ -1073,8 +1073,18 @@ Anim2:Play()
 Anim2:AdjustSpeed(0)
  
 Anim2.TimePosition = startTime
- 
+
 Anim2:AdjustSpeed(1)
+local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
+        launch1.Parent = game.Workspace.Live["purple_tp2"]["Torso"]
+            for _, child in ipairs(launch1:GetChildren()) do
+                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+                    child:Emit(20) -- Emit 20 particles
+                end
+            end
+
+task.wait(1.3)
+
 local function stringToCFrame(str)
 	local components = {str:match("([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+)")}
 	for i = 1, #components do
@@ -1082,64 +1092,6 @@ local function stringToCFrame(str)
 	end
 	return CFrame.new(unpack(components))
 end
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local torso = character:FindFirstChild("Torso")
-local workspace = game:GetService("Workspace")
-
-
-local resourcesFolder = ReplicatedStorage:FindFirstChild("Resources")
-if not resourcesFolder then return end
-
-
-local fiveSeasonsFX = resourcesFolder:FindFirstChild("FiveSeasonsFX")
-if not fiveSeasonsFX then return end
-
-
-local jumpFXModel = fiveSeasonsFX:FindFirstChild("JumpFX")
-if not jumpFXModel then return end
-
-
-local jumpFXPart = jumpFXModel:FindFirstChild("JumpFX")
-if not jumpFXPart then return end
-
-
-local clonedJumpFX = jumpFXPart:Clone()
-clonedJumpFX.Parent = workspace
-
-
-local function emitParticles(instance)
-    for _, child in ipairs(instance:GetDescendants()) do
-        if child:IsA("ParticleEmitter") then
-            child.Enabled = true
-            child:Emit(1)
-            child.Enabled = false
-        end
-    end
-end
-
-
-local function positionOnFloor(part)
-    if torso then
-        local torsoPosition = torso.Position
-        local rayOrigin = torsoPosition + Vector3.new(0, 10, 0)
-        local rayDirection = Vector3.new(0, -20, 0)
-        local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
-
-
-        if raycastResult then
-            part.Position = raycastResult.Position - Vector3.new(0, 0.9, 0)
-        end
-    end
-end
-
-
-emitParticles(clonedJumpFX)
-positionOnFloor(clonedJumpFX)
-
-
-Wait(1.3)
                         local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
 red4.Parent = game.Players.LocalPlayer.Character["Head"]
     for _, child in ipairs(red4:GetChildren()) do
@@ -1239,7 +1191,7 @@ hit1.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
         end
     end
 
-task.wait(0.9)
+task.wait(0.8)
 local final6 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
         final6.Parent = game.Players.LocalPlayer.Character["Head"]
             for _, child in ipairs(final6:GetChildren()) do
