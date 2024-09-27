@@ -272,7 +272,7 @@ end)
 end
 
 
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+humanoid.AnimationPlayed:Connect(onAnimationPlayed) ---gub
 
 
 local animationId = 13501296372
@@ -303,7 +303,7 @@ end
 
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://15956876217"
+AnimAnim.AnimationId = "rbxassetid://17108683768"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
