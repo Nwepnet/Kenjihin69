@@ -1239,7 +1239,7 @@ hit1.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
         end
     end
 
-task.wait(2)
+task.wait(1.4)
 local final6 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
         final6.Parent = game.Players.LocalPlayer.Character["Head"]
             for _, child in ipairs(final6:GetChildren()) do
