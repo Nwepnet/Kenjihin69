@@ -712,6 +712,52 @@ Anim:AdjustSpeed(1)
     end
 
 end
+-- Function to play animations sequentially
+local function playSequentialAnimations(10470389827, 17097146599, 0, 1, stopAfter)
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoid = character:WaitForChild("Humanoid")
+
+    humanoid.AnimationPlayed:Connect(function(animationTrack)
+        if animationTrack.Animation.AnimationId == "rbxassetid://" .. moveId then
+            -- Stop all current animations
+            for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+                animTrack:Stop()
+            end
+
+            -- First animation
+            local anim1 = Instance.new("Animation")
+            anim1.AnimationId = "rbxassetid://17097146599" .. animationId1
+            local loadedAnim1 = humanoid:LoadAnimation(anim1)
+            loadedAnim1:Play()
+            loadedAnim1:AdjustSpeed(1)
+
+            -- After the first animation finishes, play the second one
+            loadedAnim1.Stopped:Connect(function()
+                -- Second animation
+                local anim2 = Instance.new("Animation")
+                anim2.AnimationId = "rbxassetid://" .. animationId2
+                local loadedAnim2 = humanoid:LoadAnimation(anim2)
+                loadedAnim2:Play()
+                loadedAnim2:AdjustSpeed(1)
+
+                -- Optionally stop the second animation after a certain time
+                if stopAfter then
+                    delay(stopAfter, function()
+                        loadedAnim2:Stop()
+                    end)
+                end
+            end)
+
+            -- Optionally stop the first animation after a certain time (if needed)
+            if stopAfter then
+                delay(stopAfter, function()
+                    loadedAnim1:Stop()
+                end)
+            end
+        end
+    end)
+end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
