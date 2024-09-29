@@ -165,13 +165,11 @@ for _, child in ipairs(fx7:GetChildren()) do
         child:Emit(20) -- Emit 1 particle
     end
 end
-
-task.wait(0.1)
-  fx7:Destroy()
-
-end
-
-task.wait(0.3)
+wait(0.7)
+        fx7:Destroy()
+     end
+ end
+task.wait(0.8)
 
 local final1 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
 final1.Parent = game.Players.LocalPlayer.Character["Head"]
