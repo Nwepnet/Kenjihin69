@@ -158,15 +158,20 @@ local aqua = ColorSequence.new{
 }
 
 local fx7 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
-fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
 for _, child in ipairs(fx7:GetChildren()) do
     if child:IsA("ParticleEmitter") then
         child.Color = aqua -- Change particle color to aqua
-        child:Emit(10) -- Emit 1 particle
+        child:Emit(20) -- Emit 1 particle
     end
 end
 
-task.wait(0.2)
+task.wait(0.1)
+  fx7:Destroy()
+
+end
+
+task.wait(0.3)
 
 local final1 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
 final1.Parent = game.Players.LocalPlayer.Character["Head"]
@@ -179,7 +184,7 @@ local final4 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalIm
 final4.Parent = game.Players.LocalPlayer.Character["Torso"]
     for _, child in ipairs(final4:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-            child:Emit(2) -- Emit 20 particles
+            child:Emit(5) -- Emit 20 particles
         end
     end
 
