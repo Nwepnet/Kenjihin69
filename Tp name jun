@@ -31,7 +31,7 @@ local baseButton = hotbarFrame:FindFirstChild("2").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "???"
+ToolName.Text = "Strongest Punch"
 
 
 local player = game.Players.LocalPlayer
