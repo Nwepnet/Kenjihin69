@@ -621,7 +621,7 @@ Anim.TimePosition = startTime
  
 Anim:AdjustSpeed(0.5)
  
-task.wait(4.2)
+task.wait(4)
  
 local AnimAnim2 = Instance.new("Animation")
  
@@ -641,7 +641,7 @@ Anim2:AdjustSpeed(0)
  
 Anim2.TimePosition = startTime
  
-Anim2:AdjustSpeed(0.4)
+Anim2:AdjustSpeed(0.5)
 message = "英制冲头|inch punch"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 local Sound = Instance.new("Sound") 
