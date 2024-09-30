@@ -580,7 +580,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 11343318134 --table flip
+local animationId = 11365563255 --table flip
 
 
 local player = game.Players.LocalPlayer
