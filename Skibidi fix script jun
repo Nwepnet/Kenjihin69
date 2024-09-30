@@ -1196,6 +1196,7 @@ end
 red4.Parent = game.Players.LocalPlayer.Character["Head"]
     for _, child in ipairs(red4:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 0)) -- Set color to yellow
             child:Emit(20) -- Emit 20 particles
         end
         end
@@ -1203,6 +1204,7 @@ red4.Parent = game.Players.LocalPlayer.Character["Head"]
 red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
     for _, child in ipairs(red4:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 255)) -- Set color to yellow
             child:Emit(20) -- Emit 20 particles
         end
         end
@@ -1210,6 +1212,7 @@ local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.a
 red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
     for _, child in ipairs(red4:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 255)) -- Set color to yellow
             child:Emit(20) -- Emit 20 particles
         end
         end
@@ -1217,6 +1220,7 @@ red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
 red4.Parent = game.Players.LocalPlayer.Character["Left Arm"]
     for _, child in ipairs(red4:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 255)) -- Set color to yellow
             child:Emit(1) -- Emit 20 particles
         end
         end
