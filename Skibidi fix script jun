@@ -642,6 +642,36 @@ Anim2:AdjustSpeed(0)
 Anim2.TimePosition = startTime
  
 Anim2:AdjustSpeed(0.5)
+local function stringToCFrame(str)
+    local components = {str:match("([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),([^,]+)")}
+    for i = 1, #components do
+        components[i] = tonumber(components[i])
+    end
+    return CFrame.new(unpack(components))
+end
+ 
+                        local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
+red4.Parent = game.Players.LocalPlayer.Character["Head"]
+    for _, child in ipairs(red4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 0)) -- Set color to yellow
+            child:Emit(20) -- Emit 20 particles
+        end
+        end
+
+ task.wait(0.1)
+
+local fx7 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 237)) -- Set color to yellow
+        child:Emit(20) -- Emit 1 particle
+    end
+end
+
+task.wait(0.5)
+fx7:Destroy()               
 message = "英制冲头|inch punch"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 local Sound = Instance.new("Sound") 
@@ -977,7 +1007,7 @@ local boom1 = game.ReplicatedStorage.Resources.KJEffects["ImpactEffect2"].Attach
 boom1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
     for _, child in ipairs(boom1:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-child.Color = ColorSequence.new(Color3.fromRGB(250, 250, 237)) -- Set color to green
+child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 237)) -- Set color to green
             child:Emit(20) -- Emit 20 particles
         end
     end
