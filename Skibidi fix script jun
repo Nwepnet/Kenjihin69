@@ -977,6 +977,7 @@ local boom1 = game.ReplicatedStorage.Resources.KJEffects["ImpactEffect2"].Attach
 boom1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
     for _, child in ipairs(boom1:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+child.Color = ColorSequence.new(Color3.fromRGB(250, 250, 237)) -- Set color to green
             child:Emit(20) -- Emit 20 particles
         end
     end
