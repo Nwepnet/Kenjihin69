@@ -150,7 +150,69 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
+local function onEquipped()
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    if character then
+        local humanoid = character:WaitForChild("Humanoid")
+        local rootPart = character:WaitForChild("HumanoidRootPart")
 
+        rootPart.Anchored = false
+
+        local animation = Instance.new("Animation")
+        animation.AnimationId = animationId
+        local animationTrack = humanoid:LoadAnimation(animation)
+        animationTrack:Play()
+        animationTrack:AdjustSpeed(1)
+
+        sound:Play()
+
+        -- Movement logic
+        local initialSpeed = 0.5
+        local finalSpeed = 3
+        local moveSpeed = 250
+        local speed = initialSpeed
+        local changeTime = 2.3
+        local elapsedTime = 0
+
+        local runService = game:GetService("RunService")
+        local moveConnection
+
+        local function startMoving()
+            moveConnection = runService.RenderStepped:Connect(function(deltaTime)
+                elapsedTime = elapsedTime + deltaTime
+                if elapsedTime >= changeTime then
+                    moveSpeed = 350
+                end
+
+                local lookVector = rootPart.CFrame.LookVector
+                local newVelocity = lookVector * moveSpeed * speed
+
+                rootPart.Velocity = newVelocity
+            end)
+        end
+
+        local function stopMoving()
+            if moveConnection then
+                moveConnection:Disconnect()
+                moveConnection = nil
+                speed = initialSpeed -- Reset speed for the next use
+                elapsedTime = 0 -- Reset elapsed time
+                rootPart.Velocity = Vector3.new(0, 0, 0) -- Stop the movement
+            end
+        end
+
+        animationTrack.Stopped:Connect(stopMoving)
+        startMoving()
+
+        tool.Unequipped:Connect(function()
+            print("your unequipped text here")
+            stopMoving()
+            animationTrack:Stop() -- Ensure animation stops when tool is unequipped
+            sound:Stop() -- Stop the sound as well
+        end)
+    end
+end
 
     end
 
