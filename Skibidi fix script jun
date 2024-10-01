@@ -1053,9 +1053,21 @@ collateral4.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
             child:Emit(10) -- Emit 20 particles
         end
     end
-task.wait(6)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Base%20move'))()
-
+local Sound = Instance.new("Sound") 
+        Sound.Parent = character 
+        Sound.SoundId = "rbxassetid://18460952794" 
+        Sound.Playing = true 
+        spawn(function()
+        wait(1) 
+        debounce = true 
+        end) 
+        playAnim:Play() 
+        playAnim:AdjustSpeed(0.3) 
+        wait(0.3) 
+        playAnim:AdjustSpeed(1) 
+        local Players = game:GetService("Players") 
+        local Character = Players.LocalPlayer.Character or Players.LocalPlayer.CharacterAdded:Wait() 
+        local animationPlayed = false -- Flag to track if the animation has already been played
     end
 
 end
