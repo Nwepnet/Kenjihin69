@@ -467,9 +467,9 @@ Anim:AdjustSpeed(0)
  
 Anim.TimePosition = startTime
  
-Anim:AdjustSpeed(0.3)
+Anim:AdjustSpeed(0.2)
  
-task.wait(0.3)
+task.wait(1)
  
 local AnimAnim2 = Instance.new("Animation")
  
