@@ -359,7 +359,9 @@ red4.Parent = game.Players.LocalPlayer.Character["Head"]
             child:Emit(20) -- Emit 20 particles
         end
         end
-                
+
+ task.wait(1)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Base%20move'))()
     end
 
 end
@@ -692,8 +694,6 @@ local Sound = Instance.new("Sound")
         local Character = Players.LocalPlayer.Character or Players.LocalPlayer.CharacterAdded:Wait() 
         local animationPlayed = true -- Flag to track if the animation has already been played
 
-task.wait(5)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Base%20move'))()
     end
 
 end
@@ -958,8 +958,6 @@ local Sound = Instance.new("Sound")
         local Character = Players.LocalPlayer.Character or Players.LocalPlayer.CharacterAdded:Wait() 
         local animationPlayed = true -- Flag to track if the animation has already been player
 
-task.wait(1)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Base%20move'))()
     end
 
 end
