@@ -257,10 +257,10 @@ boom1.Parent = game.Players.LocalPlayer.Character["Torso"]
     end
 task.wait(0.1)
 local final2 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Origin:Clone()
-        final2.Parent = game.Players.LocalPlayer.Character["Torso"]
+        final2.Parent = game.Players.LocalPlayer.Character["Head"]
             for _, child in ipairs(final2:GetChildren()) do
                 if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(10) -- Emit 20 particles
+                    child:Emit(20) -- Emit 20 particles
                 end
             end
 local Sound = Instance.new("Sound") 
