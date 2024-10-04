@@ -255,7 +255,7 @@ boom1.Parent = game.Players.LocalPlayer.Character["Torso"]
             child:Emit(3) -- Emit 20 particles
         end
     end
-task.wait(0.1)
+task.wait(0.3)
 local final2 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Origin:Clone()
         final2.Parent = game.Players.LocalPlayer.Character["Head"]
             for _, child in ipairs(final2:GetChildren()) do
@@ -279,10 +279,7 @@ local Sound = Instance.new("Sound")
         local Character = Players.LocalPlayer.Character or Players.LocalPlayer.CharacterAdded:Wait() 
         local animationPlayed = false -- Flag to track if the animation has already been played
 
-task.wait(0.3)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Base%20move'))()
     end
-
 end
 
 
@@ -505,6 +502,8 @@ Anim2:AdjustSpeed(0)
 Anim2.TimePosition = startTime
  
 Anim2:AdjustSpeed(200)
+
+task.wait(0.2)
  loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Base%20move'))()
     end
 
