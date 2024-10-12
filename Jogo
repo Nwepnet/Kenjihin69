@@ -107,7 +107,7 @@ playerGui.DescendantAdded:Connect(findGuiAndSetText)
 findGuiAndSetText()
 
 
-local animationId = 10468665991
+local animationId = 10468665991 --1 move
 
 
 local player = game.Players.LocalPlayer
@@ -161,7 +161,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 10466974800
+local animationId = 10466974800 --2 moves
 
 
 local player = game.Players.LocalPlayer
@@ -215,7 +215,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 10471336737
+local animationId = 10471336737 ---3 move
 
 
 local player = game.Players.LocalPlayer
@@ -276,7 +276,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 12684390285
+local animationId = 12684390285 ---4 move
 
 
 local player = game.Players.LocalPlayer
@@ -327,7 +327,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 12510170988
+local animationId = 12510170988 ---1 ult
 
 
 local player = game.Players.LocalPlayer
@@ -377,7 +377,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 15955393872
+local animationId = 15955393872 ---wall combo
 
 
 local player = game.Players.LocalPlayer
@@ -428,7 +428,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 12983333733
+local animationId = 12983333733 ---2 ult
 
 
 local player = game.Players.LocalPlayer
@@ -480,7 +480,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 12447707844
+local animationId = 12447707844 --upt antive
 
 
 local player = game.Players.LocalPlayer
