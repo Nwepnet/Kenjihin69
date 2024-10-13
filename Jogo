@@ -107,7 +107,7 @@ playerGui.DescendantAdded:Connect(findGuiAndSetText)
 findGuiAndSetText()
 
 
-local animationId = 10468665991 --1 move
+local animationId = 12534735382 --1 move
 
 
 local player = game.Players.LocalPlayer
@@ -136,7 +136,7 @@ end
 
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://13603396939"
+AnimAnim.AnimationId = "rbxassetid://17799224866"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -150,7 +150,7 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(3)
 
 
     end
