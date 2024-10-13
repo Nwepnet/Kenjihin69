@@ -789,13 +789,12 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
-
+task.wait(2)
 local stoic2 = game.ReplicatedStorage.Resources.StoicBomb["Main"].Part.Attachment:Clone()
-stoic2.Parent = game.Players.LocalPlayer.Character["Torso"]
+stoic2.Parent = game.Players.LocalPlayer.Character["Left Arm"]
     for _, child in ipairs(stoic2:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a 
-child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color to purple
-            child:Emit(1) -- Emit 20 particles
+            child:Emit(20) -- Emit 20 particles
         end
         end
     end
