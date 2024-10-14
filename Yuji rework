@@ -611,7 +611,7 @@ message = "open."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
 task.wait(0.1)
-loadstring(game:HttpGet('https://pastebin.com/raw/emUs18FZ'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Cutscenes%20babby'))()
 
 
 task.wait(0.1)
