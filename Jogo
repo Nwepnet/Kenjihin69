@@ -358,7 +358,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 17799224866  ---1 ult
+local animationId = 14721837245  ---1 ult
 
 
 local player = game.Players.LocalPlayer
