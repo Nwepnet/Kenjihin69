@@ -1638,3 +1638,73 @@ end
 -- Create effects for Right Arm, Left Arm
 createEffect(rightArm)
 createEffect(leftArm)
+
+humanoid.AnimationPlayed:Connect(onAnimationTrackStarted)
+-- Function to emit purple particles from both arms
+local function emitParticlesOnArms()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    for i = 1, 2 do  -- Repeat 5 times
+        -- Emit particles on the right arm
+        local fx7 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color to purple
+        child:Emit(1) -- Emit 1 particle
+    end
+end
+
+        -- Emit particles on the left arm
+        local fx7 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color to purple
+        child:Emit(1) -- Emit 1 particle
+         end
+      end
+    end
+end
+
+-- Function to play animations sequentially
+local function playSequentialAnimations(speed, stopAfter)
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoid = character:WaitForChild("Humanoid")
+    local animationIds = {
+        "10469643643", -- First animation
+        "10469639222", -- Second animation
+    }
+
+    -- Recursive function to play animations in sequence
+    local function playAnimationSequence(index)
+        if index > #animationIds then return end
+        local anim = Instance.new("Animation")
+        anim.AnimationId = "rbxassetid://" .. animationIds[index]
+        local loadedAnim = humanoid:LoadAnimation(anim)
+        loadedAnim:Play()
+        loadedAnim:AdjustSpeed(speed)
+        loadedAnim.Stopped:Connect(function()
+            playAnimationSequence(index + 1)
+        end)
+        if stopAfter then
+            delay(stopAfter, function()
+                loadedAnim:Stop()
+            end)
+        end
+    end
+
+    -- Start the animation sequence
+    playAnimationSequence(1)
+end
+
+-- Function to trigger both effects and animations
+local function triggerEffectsAndAnimations(emitCount, speed, stopAfter)
+    emitParticlesOnArms()  -- Emit purple particles
+    playSequentialAnimations(speed, stopAfter)  -- Play animations in sequence
+end
+
+-- Trigger the effects and animations
+triggerEffectsAndAnimations(1, 1.0, 2)
