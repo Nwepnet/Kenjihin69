@@ -1,0 +1,14 @@
+local PabloLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BatuKvi123/PabloLibV3/main/PabloLibV3"))()
+local window = PabloLib:Create(
+"Tp hub", -- Name here.
+"Enabled", -- If you want draggable set here to "Enabled" if you dont want set to "Disabled".
+"n" -- You can put any keybind here to open close.
+)
+local tab1 = window:CreateTab("custom characters")
+tab1:CreateButton("saitama to jun", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Tp%20exploit%20saitama%20to%20jun'))()
+end)
+
+tab1:CreateButton("saitama to jun2 not my", function()
+loadstring(game:HttpGet("https://pastefy.app/1m6k8kOE/raw"))()
+end)
