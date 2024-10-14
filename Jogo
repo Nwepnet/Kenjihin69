@@ -358,7 +358,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 12772543293 ---1 ult
+local animationId = 17799224866  ---1 ult
 
 
 local player = game.Players.LocalPlayer
@@ -459,7 +459,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 12983333733 ---2 ult
+local animationId = 12447707844 ---2 ult
 
 
 local player = game.Players.LocalPlayer
@@ -511,7 +511,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 12447707844 --upt antive
+local animationId = 12772543293 --upt antive
 
 
 local player = game.Players.LocalPlayer
@@ -554,7 +554,7 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(0.5)
+Anim:AdjustSpeed(0.7)
 
     end
 
