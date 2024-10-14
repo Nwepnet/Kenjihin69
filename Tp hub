@@ -20,3 +20,10 @@ end)
 tab1:CreateButton("saitama to yuji/sukuna rework :not finish", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Yuji%20rework'))()
 end)
+
+
+
+local tab1 = window:CreateTab("tools")
+tab1:CreateButton("spin tools use hero hunter:credit by strange_computer", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/BwQLwss6"))()
+end)
