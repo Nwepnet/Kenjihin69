@@ -401,7 +401,7 @@ Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(0.7)
 
-task.wait(2)
+task.wait(1.6)
 
 local AnimAnim2 = Instance.new("Animation")
 
@@ -421,7 +421,7 @@ Anim2:AdjustSpeed(0)
 
 Anim2.TimePosition = startTime
 
-Anim2:AdjustSpeed(1)
+Anim2:AdjustSpeed(0.8)
 
     end
 
@@ -576,7 +576,24 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(0.3)
-
+local red4_1 = game.ReplicatedStorage.Resources.StoicBomb["HEAT"].Part.Attachment:Clone()
+red4_1.Parent = game.Players.LocalPlayer.Character["Left Leg"]
+for _, child in ipairs(red4_1:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        child:Emit(20)
+    end
+end
+task.wait(0.1)
+local red4_2 = game.ReplicatedStorage.Resources.StoicBomb["Stage1"].Floor.Attachment:Clone()
+red4_2.Parent = game.Players.LocalPlayer.Character["Left Leg"]
+for _, child in ipairs(red4_2:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        child:Emit(20)
+    end
+end
+wait(8)
+        red4_1:Destroy()
+        red4_2:Destroy()
     end
 
 end
