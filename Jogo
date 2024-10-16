@@ -429,7 +429,7 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 15955393872 ---wall combo
+local animationId = 15943915877 ---wall combo
 
 
 local player = game.Players.LocalPlayer
@@ -457,12 +457,12 @@ end
 
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://15943915877"
+AnimAnim.AnimationId = "rbxassetid://17464644182"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
 
-local startTime = 0.05
+local startTime = 0
 
 
 Anim:Play()
@@ -471,8 +471,99 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(1.5)
+task.wait(0.15)
+local fx7 = Game.ReplicatedStorage.Resources.Ricochet["Hit"].Part.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 55, 0)) -- Set color
+        child:Emit(3) -- Emit 1 particle
+    end
+end local fx7 = Game.ReplicatedStorage.Resources.KJEffects["fine...Emit"].EmitBatch1:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 55, 0)) -- Set color
+        child:Emit(6) -- Emit 1 particle
+    end
+end task.wait(0.8) Anim:Stop()
 
+local AnimAnim = Instance.new("Animation")
+
+AnimAnim.AnimationId = "rbxassetid://16598695404"
+
+local Anim = Humanoid:LoadAnimation(AnimAnim)
+
+
+local startTime = 1.25
+
+
+Anim:Play()
+
+Anim:AdjustSpeed(0)
+
+Anim.TimePosition = startTime
+
+Anim:AdjustSpeed(0.7)
+task.wait(0.75)
+local fx7 = Game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color
+        child:Emit(4) -- Emit 1 particle
+    end
+end task.wait(1.05) local fx7 = Game.ReplicatedStorage.Resources.CrabBeam["Explo"].Explo.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 55, 0)) -- Set color
+        child:Emit(1) -- Emit 1 particle
+    end
+end local fx7 = Game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 85, 0)) -- Set color
+        child:Emit(4) -- Emit 1 particle
+    end
+end local fx7 = Game.ReplicatedStorage.Resources.KJEffects["fine...Emit"].EmitBatch1:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 55, 0)) -- Set color
+        child:Emit(6) -- Emit 1 particle
+    end
+end local fx7 = Game.ReplicatedStorage.Resources.Ricochet["Hit"].Part.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 85, 0)) -- Set color
+        child:Emit(3) -- Emit 1 particle
+    end
+end local fx7 = Game.ReplicatedStorage.Resources.Ricochet["Grab"].Part.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 85, 0)) -- Set color
+        child:Emit(2) -- Emit 1 particle
+    end
+end local fx7 = Game.ReplicatedStorage.Resources.Ricochet["FinalLand"].Part.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 85, 0)) -- Set color
+        child:Emit(1) -- Emit 1 particle
+    end
+end local fx7 = Game.ReplicatedStorage.Resources.CrabBeam["Blaswwwt"].dashpunch.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 85, 0)) -- Set color
+        child:Emit(2) -- Emit 1 particle
+    end
+end
 
     end
 
