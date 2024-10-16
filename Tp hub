@@ -22,7 +22,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69
 end)
 
 tab1:CreateButton("saitama to Luffy:credit idk_bro777", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Jogo'))()
+loadstring(game:HttpGet('https://pastebin.com/raw/njtCnip1'))()
 end)
 
 local tab1 = window:CreateTab("tools")
