@@ -21,7 +21,9 @@ tab1:CreateButton("saitama to yuji/sukuna rework :not finish", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Yuji%20rework'))()
 end)
 
-
+tab1:CreateButton("saitama to Luffy:credit idk_bro777", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Jogo'))()
+end)
 
 local tab1 = window:CreateTab("tools")
 tab1:CreateButton("spin tools use hero hunter:credit by strange_computer", function()
