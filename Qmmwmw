@@ -1,4 +1,1 @@
 loadstring(game:HttpGet('https://pastebin.com/raw/igtC6Bfc'))()
-
-task.wait(0.1)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Why%20don't%20you'))()
