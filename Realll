@@ -108,7 +108,7 @@ local magicHealth = screenGui:WaitForChild("MagicHealth")
 local textLabel = magicHealth:WaitForChild("TextLabel")
 
 textLabel.Font = Enum.Font.RobotoMono
-textLabel.TextSize = 16.1
+textLabel.TextSize = 16
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 local screenGui = playerGui:WaitForChild("ScreenGui")
