@@ -39,8 +39,7 @@ function Cinematic(moduleData)
             end
         end)
     end
-    Cinematic(loadstring(game:HttpGet('https://raw.githubusercontent.com/AlperPro/shhh/main/wallcombo.lua'))())
-
+    Cinematic(loadstring(game:HttpGet('https://pastebin.com/k9S4B5kK'))()
 
 local ScreenGui = Instance.new("ScreenGui")
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
