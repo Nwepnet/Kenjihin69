@@ -1,31 +1,70 @@
-local PabloLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BatuKvi123/PabloLibV3/main/PabloLibV3"))()
-local window = PabloLib:Create(
-"giffith tp hub", -- Name here.
-"Enabled", -- If you want draggable set here to "Enabled" if you dont want set to "Disabled".
-"n" -- You can put any keybind here to open close.
-)
-local tab1 = window:CreateTab("custom characters")
-tab1:CreateButton("saitama to jun", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Tp%20exploit%20saitama%20to%20jun'))()
-end)
 
-tab1:CreateButton("saitama to jun2 credit:giffith_femto", function()
-loadstring(game:HttpGet("https://pastefy.app/1m6k8kOE/raw"))()
-end)
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-tab1:CreateButton("genos to jogo:not finish", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Jogo'))()
-end)
+local Window = Rayfield:CreateWindow({
+   Name = "◇ • Exploit Hub • ◇",
+   LoadingTitle = "¿?Loading?¿",
+   LoadingSubtitle = "By Digital Scripter Group",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "None No shit"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "discord.gg/fFxvdU34", -- The Discord invite
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Exploit Hub Keys",
+      Subtitle = "Key System",
+      Note = "Join Discord Servers Dumbass https://discord.gg/fFxvdU34",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"GyatMyBro"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
 
-tab1:CreateButton("saitama to yuji/sukuna rework :not finish", function()
+local Tab = Window:CreateTab("bonus", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Idk")
+
+Section:Set("Idk")
+
+local Button = Tab:CreateButton({
+   Name = "End Interface",
+   Callback = function()
+  Rayfield:Destroy() -- The function
+   end,
+
+})
+
+Button:Set("destroy the hub")
+
+local Button = Tab:CreateButton({
+   Name = "invisibility",
+   Callback = function()
+loadstring(game:HttpGet('https://pastebin.com/raw/VByZKaMg'))()
+   end,
+
+})
+
+Button:Set("invisible need sonic passive")
+
+local Tab = Window:CreateTab("custom characters", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Idk")
+
+Section:Set("Idk")
+
+local Button = Tab:CreateButton({
+   Name = "tp exploit",
+   Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Yuji%20rework'))()
-end)
+   end,
 
-tab1:CreateButton("saitama to Luffy:credit idk_bro777", function()
-loadstring(game:HttpGet('https://pastebin.com/raw/njtCnip1'))()
-end)
+})
 
-local tab1 = window:CreateTab("tools")
-tab1:CreateButton("spin tools use hero hunter:credit by strange_computer", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/BwQLwss6"))()
-end)
+Button:Set(" saitama to yuji/sukuna rework")
