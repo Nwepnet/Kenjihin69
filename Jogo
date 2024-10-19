@@ -663,7 +663,7 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(0.9)
+Anim:AdjustSpeed(1.4)
 
     end
 
@@ -794,59 +794,7 @@ end
 
 end
 
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
-
-
-local animationId = 10503381238
-
-
-local player = game.Players.LocalPlayer
-
-local character = player.Character or player.CharacterAdded:Wait()
-
-local humanoid = character:WaitForChild("Humanoid")
-
-
-local function onAnimationPlayed(animationTrack)
-
-    if animationTrack.Animation.AnimationId == "rbxassetid://" .. animationId then
-
-local p = game.Players.LocalPlayer
-
-local Humanoid = p.Character:WaitForChild("Humanoid")
-
-
-for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
-
-    animTrack:Stop()
-
-end
-
-
-local AnimAnim = Instance.new("Animation")
-
-AnimAnim.AnimationId = "rbxassetid://14900168720"
-
-local Anim = Humanoid:LoadAnimation(AnimAnim)
-
-
-local startTime = 1.3
-
-
-Anim:Play()
-
-Anim:AdjustSpeed(0)
-
-Anim.TimePosition = startTime
-
-Anim:AdjustSpeed(1)
-
-
-    end
-
-end
-
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+humanoid.AnimationPlayed:Connect(onAnimationPlayed) ---down slam
 
 
 local animationId = 10470104242
