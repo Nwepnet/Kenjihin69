@@ -68,3 +68,14 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69
 })
 
 Button:Set(" saitama to yuji/sukuna rework:not finish")
+
+local Button = Tab:CreateButton({
+   Name = "tp exploit",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Tp%20exploit%20saitama%20to%20jun'))()
+   end,
+
+})
+
+Button:Set("saitama to jun from combat")
+
