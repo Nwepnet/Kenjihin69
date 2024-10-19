@@ -100,3 +100,13 @@ loadstring(game:HttpGet("https://pastefy.app/1m6k8kOE/raw"))()
 })
 
 Button:Set("saitama to jun2 by Griffith ")
+
+local Button = Tab:CreateButton({
+   Name = "tp exploit",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Jogo'))()
+   end,
+
+})
+
+Button:Set("genos to jogo not finish")
