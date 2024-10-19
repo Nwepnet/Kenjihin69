@@ -91,3 +91,12 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69
 
 Button:Set("saitama to jun from combat")
 
+local Button = Tab:CreateButton({
+   Name = "Griffith",
+   Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/1m6k8kOE/raw"))()
+   end,
+
+})
+
+Button:Set("saitama to jun2 by Griffith ")
