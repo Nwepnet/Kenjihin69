@@ -122,3 +122,4 @@ local Keybind = Tab:CreateKeybind({
    -- The variable (Keybind) is a boolean for whether the keybind is being held or not (HoldToInteract needs to be true)
    end,
 })
+Keybind:Set("X")
