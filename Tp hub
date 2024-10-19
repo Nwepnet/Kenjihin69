@@ -53,6 +53,18 @@ loadstring(game:HttpGet('https://pastebin.com/raw/VByZKaMg'))()
 
 Button:Set("invisible need sonic passive")
 
+
+local Button = Tab:CreateButton({
+   Name = "tp exploit",
+   Callback = function()
+loadstring(game:HttpGet('https://pastebin.com/raw/P4H21wxn'))()
+   end,
+
+})
+
+Button:Set("speed animation emote or animation")
+
+
 local Tab = Window:CreateTab("custom characters", 4483362458) -- Title, Image
 
 local Section = Tab:CreateSection("Idk")
