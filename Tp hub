@@ -67,4 +67,4 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69
 
 })
 
-Button:Set(" saitama to yuji/sukuna rework")
+Button:Set(" saitama to yuji/sukuna rework:not finish")
