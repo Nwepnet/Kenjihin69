@@ -1,3 +1,4 @@
+
 local TextLabelText = "ESSENCE OF THE SOUL" --ult name editor
 
 
@@ -53,13 +54,13 @@ local player = game.Players.LocalPlayer
 local screenGui = player:WaitForChild("PlayerGui"):WaitForChild("ScreenGui")
 local magicHealth = screenGui:WaitForChild("MagicHealth")
 
-magicHealth.BackgroundTransparency = 0.5
+magicHealth.BackgroundTransparency = 0.3
 
 magicHealth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 
 magicHealth.BorderColor3 = Color3.fromRGB(0, 0, 0)
 
-magicHealth.BorderSizePixel = 2
+magicHealth.BorderSizePixel = 1
 
 local player = game.Players.LocalPlayer
 local screenGui = player:WaitForChild("PlayerGui"):WaitForChild("ScreenGui")
