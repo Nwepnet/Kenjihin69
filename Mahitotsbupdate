@@ -1,4 +1,6 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Reall'))()
+task.wait(0.1)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Effect'))()
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local humanoid = player.Character.Humanoid
