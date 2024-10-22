@@ -3,7 +3,7 @@ fx7.Parent = game.Players.LocalPlayer.Character["Left Arm"]
 for _, child in ipairs(fx7:GetChildren()) do
     if child:IsA("ParticleEmitter") then
 child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color to purple
-        child:Emit(1) -- Emit 1 particle
+        child:Emit(2) -- Emit 1 particle
          end
       end
 task.wait(0.1)
@@ -12,6 +12,6 @@ fx7.Parent = game.Players.LocalPlayer.Character["Right Arm"]
 for _, child in ipairs(fx7:GetChildren()) do
     if child:IsA("ParticleEmitter") then
 child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color to purple
-        child:Emit(1) -- Emit 1 particle
+        child:Emit(2) -- Emit 1 particle
     end
 end
