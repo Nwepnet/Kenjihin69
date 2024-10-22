@@ -672,7 +672,7 @@ child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color to pu
     end
 end
 
- task.wait(0.9)
+ task.wait(1.1)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Nuke%20black%20flash'))()
 
     end
