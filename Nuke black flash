@@ -1,0 +1,23 @@
+local p = game.Players.LocalPlayer
+local c = p.Character
+local h = c:FindFirstChild("HumanoidRootPart")
+
+local function d(e)
+    local f = game.ReplicatedStorage.Resources.KJEffects.KJWallCombo[e]
+    local g = f:Clone()
+    g.Parent = workspace
+    g.CFrame = h.CFrame * CFrame.new(0, 0, 0) * CFrame.Angles(0, math.pi / 0.1, 0)
+    
+    for _, a in ipairs(g:GetDescendants()) do
+        if a:IsA("Attachment") then
+            for _, b in ipairs(a:GetChildren()) do
+                if b:IsA("ParticleEmitter") then
+                    b:Emit(1)
+                end
+            end
+        end
+    end
+end
+
+d("FinalImpact")
+d("FinalImpactHUGEignore")
