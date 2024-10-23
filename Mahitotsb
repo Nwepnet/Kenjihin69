@@ -971,7 +971,7 @@ delay(1.2, function()
     Anim:Stop()
 
 end)
-task.wait(0.8)
+task.wait(0.7)
 local fx7 = Game.ReplicatedStorage.Resources.CrabBeam["Blaswwwt"].dashpunch.Attachment:Clone()
 fx7.Parent = game.Players.LocalPlayer.Character["Torso"]
 for _, child in ipairs(fx7:GetChildren()) do
