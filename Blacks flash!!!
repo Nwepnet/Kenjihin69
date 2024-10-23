@@ -1,0 +1,83 @@
+task.spawn(function()
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Define the source path
+local sourcePath = ReplicatedStorage.Resources.KJEffects.DropkickExtra.firstHit
+
+-- Function to destroy empty attachments
+local function destroyEmptyAttachments(folder)
+    for _, item in ipairs(folder:GetChildren()) do
+        if item:IsA("Attachment") then
+            -- Check if the attachment has no children
+            if #item:GetChildren() == 0 then
+                item:Destroy()  -- Destroy the empty attachment
+            else
+                -- Recursively check children attachments
+                destroyEmptyAttachments(item)
+            end
+        end
+    end
+end
+
+-- Start the process
+destroyEmptyAttachments(sourcePath)
+end)
+task.spawn(function()
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Define paths
+local firstHit = ReplicatedStorage.Resources.KJEffects.DropkickExtra.firstHit
+local initialName = "Attachment"
+local newName = "E"
+local flagName = "FirstScriptExecutedFlag"
+
+-- Create or get the flag in ReplicatedStorage
+local flag = ReplicatedStorage:FindFirstChild(flagName)
+if not flag then
+    flag = Instance.new("BoolValue")
+    flag.Name = flagName
+    flag.Value = false
+    flag.Parent = ReplicatedStorage
+end
+
+-- Function for the first script
+local function executeFirstScript()
+    if not flag.Value then
+        -- Execute the first script logic
+        local attachment = firstHit:FindFirstChild(initialName)
+        if attachment then
+            attachment.Name = newName
+        end
+        
+        -- Set the flag to prevent re-execution of the first script
+        flag.Value = true
+    end
+end
+
+-- Function for the continuous script
+local function executeContinuousScript()
+    while true do
+        -- Execute the continuous script logic
+        local attachment = firstHit:FindFirstChild(newName)
+        if attachment then
+            attachment.Name = newName  -- Or any other logic you want to apply
+        end
+        
+        -- Wait for a short time before repeating (adjust as needed)
+        wait(0.1)
+    end
+end
+
+-- Main execution
+executeFirstScript()  -- Execute the first script once
+if flag.Value then
+    executeContinuousScript()  -- Start the continuous script if the first script has been executed
+end
+end)
+local final1 = game.ReplicatedStorage.Resources.KJEffects.DropkickExtra["firstHit"].E:Clone()
+final1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(final1:GetChildren()) do
+    if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+        child:Emit(5) -- Emit 20 particles
+    end
+end
