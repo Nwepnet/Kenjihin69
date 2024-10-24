@@ -302,7 +302,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 10471336737
+local animationId = 12309835105
 
 
 local player = game.Players.LocalPlayer
@@ -331,12 +331,12 @@ end
 
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://13294790250"
+AnimAnim.AnimationId = "rbxassetid://12510170988"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
 
-local startTime = 0.5
+local startTime = 0
 
 
 Anim:Play()
@@ -347,13 +347,27 @@ Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
 
+task.wait(0.7)
 
-delay(1.8, function()
+local AnimAnim2 = Instance.new("Animation")
 
-    Anim:Stop()
+AnimAnim2.AnimationId = "rbxassetid://13390230973"
 
-end)
+local Anim2 = Humanoid:LoadAnimation(AnimAnim2)
 
+
+local startTime = 0
+
+
+Anim:Stop()
+
+Anim2:Play()
+
+Anim2:AdjustSpeed(0)
+
+Anim2.TimePosition = startTime
+
+Anim2:AdjustSpeed(1)
 
     end
 
