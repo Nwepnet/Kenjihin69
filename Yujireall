@@ -773,13 +773,13 @@ Anim.TimePosition = startTime
 Anim:AdjustSpeed(1)
 
 local startTime = tick()  -- Get the current time in seconds Uh yep
-local duration = 3.25  -- Duration in sec Heh
+local duration = 2  -- Duration in sec Heh
 
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 
 local floatSpeed = 5 -- Adjust speed fuck you nigga length you want
-local duration = 4 -- Duration in sec :whatthehellbro: 0.1 cuz yes
+local duration = 3 -- Duration in sec :whatthehellbro: 0.1 cuz yes
 
 local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 if humanoidRootPart then
