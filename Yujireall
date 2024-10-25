@@ -538,16 +538,16 @@ Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(6)
 
-task.wait(1)
+task.wait(1.4)
 
 local AnimAnim2 = Instance.new("Animation")
 
-AnimAnim2.AnimationId = "rbxassetid://15957361339"
+AnimAnim2.AnimationId = "rbxassetid://18897119503"
 
 local Anim2 = Humanoid:LoadAnimation(AnimAnim2)
 
 
-local startTime = 0
+local startTime = 1
 
 
 Anim:Stop()
