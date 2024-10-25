@@ -584,7 +584,7 @@ Anim2:AdjustSpeed(0)
 Anim2.TimePosition = startTime
 
 Anim2:AdjustSpeed(1)
-task.wait(0.3)
+task.wait(0.4)
 -- Aqua color sequence (cyan and light blue)
 local aqua = ColorSequence.new{
     ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 255, 255)), -- cyan
