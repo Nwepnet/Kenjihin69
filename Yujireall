@@ -326,6 +326,14 @@ for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
 
     animTrack:Stop()
 
+local fx7 = Game.ReplicatedStorage.Resources.CrabBeam["Blaswwwt"].dashpunch.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Torso"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.fromRGB(255, 0, 0)) -- Set color to stuff
+        child:Emit(4) -- Emit STUFF particle
+    end
+end
 end
 
 
