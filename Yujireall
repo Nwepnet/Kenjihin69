@@ -463,13 +463,13 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(0.9)
-task.wait(0.6)
+task.wait(1.3)
 local boom1 = game.ReplicatedStorage.Resources.KJEffects["ImpactEffect2"].Attachment:Clone()
 boom1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
     for _, child in ipairs(boom1:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
 child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 237)) -- Set color to green
-            child:Emit(17) -- Emit 20 particles
+            child:Emit(11) -- Emit 20 particles
         end
     end
 
