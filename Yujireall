@@ -749,13 +749,7 @@ local Humanoid = p.Character:WaitForChild("Humanoid")
 for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
 
     animTrack:Stop()
-local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
-red4.Parent = game.Players.LocalPlayer.Character["Head"]
-    for _, child in ipairs(red4:GetChildren()) do
-        if child:IsA("ParticleEmitter") then -- Check if the child is a 
-            child:Emit(20) -- Emit 20 particles
-        end
-    end
+
 end
 
 
@@ -795,6 +789,34 @@ if humanoidRootPart then
 
     end
 end
+task.wait(1.5)
+
+local AnimAnim2 = Instance.new("Animation")
+
+AnimAnim2.AnimationId = "rbxassetid://15957376722"
+
+local Anim2 = Humanoid:LoadAnimation(AnimAnim2)
+
+
+local startTime = 0
+
+
+Anim:Stop()
+
+Anim2:Play()
+
+Anim2:AdjustSpeed(0)
+
+Anim2.TimePosition = startTime
+
+Anim2:AdjustSpeed(1)
+local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
+red4.Parent = game.Players.LocalPlayer.Character["Head"]
+    for _, child in ipairs(red4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a 
+            child:Emit(20) -- Emit 20 particles
+        end
+    end
     end
 
 end
