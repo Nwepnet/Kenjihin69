@@ -728,7 +728,13 @@ local Humanoid = p.Character:WaitForChild("Humanoid")
 for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
 
     animTrack:Stop()
-
+local red4 = game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit:Clone()
+red4.Parent = game.Players.LocalPlayer.Character["Head"]
+    for _, child in ipairs(red4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a 
+            child:Emit(20) -- Emit 20 particles
+        end
+    end
 end
 
 
@@ -756,8 +762,8 @@ local duration = 3.25  -- Duration in sec Heh
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 
-local floatSpeed = 1 -- Adjust speed fuck you nigga length you want
-local duration = 4.3 -- Duration in sec :whatthehellbro: 0.1 cuz yes
+local floatSpeed = 4 -- Adjust speed fuck you nigga length you want
+local duration = 6 -- Duration in sec :whatthehellbro: 0.1 cuz yes
 
 local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 if humanoidRootPart then
