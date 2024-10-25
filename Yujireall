@@ -778,8 +778,8 @@ local duration = 3.25  -- Duration in sec Heh
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 
-local floatSpeed = 4 -- Adjust speed fuck you nigga length you want
-local duration = 6 -- Duration in sec :whatthehellbro: 0.1 cuz yes
+local floatSpeed = 5 -- Adjust speed fuck you nigga length you want
+local duration = 4 -- Duration in sec :whatthehellbro: 0.1 cuz yes
 
 local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 if humanoidRootPart then
@@ -790,7 +790,7 @@ if humanoidRootPart then
 
     end
 end
-task.wait(1.5)
+task.wait(0.7)
 
 local AnimAnim2 = Instance.new("Animation")
 
