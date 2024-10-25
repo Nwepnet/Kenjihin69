@@ -477,7 +477,7 @@ boom1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
     for _, child in ipairs(boom1:GetChildren()) do
         if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
 child.Color = ColorSequence.new(Color3.fromRGB(255, 255, 237)) -- Set color to green
-            child:Emit(7) -- Emit 20 particles
+            child:Emit(4) -- Emit 20 particles
         end
     end
 task.wait(0.7)
