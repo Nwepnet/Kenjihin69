@@ -706,7 +706,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 12447707844
+local animationId = 12342141464 ---ult
 
 
 local player = game.Players.LocalPlayer
@@ -734,7 +734,7 @@ end
 
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://18435303746"
+AnimAnim.AnimationId = "rbxassetid://15962326593"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -750,6 +750,24 @@ Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
 
+local startTime = tick()  -- Get the current time in seconds Uh yep
+local duration = 3.25  -- Duration in sec Heh
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local floatSpeed = 1 -- Adjust speed fuck you nigga length you want
+local duration = 4.3 -- Duration in sec :whatthehellbro: 0.1 cuz yes
+
+local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+if humanoidRootPart then
+    local startTime = tick()
+    while tick() - startTime < duration do
+        wait(0.01) -- Controls how the loop runs googoogaga
+        humanoidRootPart.CFrame = humanoidRootPart.CFrame + humanoidRootPart.CFrame.LookVector * floatSpeed * 0.1
+
+    end
+end
     end
 
 end
