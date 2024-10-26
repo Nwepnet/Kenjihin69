@@ -842,6 +842,21 @@ task.wait(0.8)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Nuke%20black%20flash'))()
 
 task.wait(0.1)
+-- Aqua color sequence (cyan and light blue)
+local aqua = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 255, 255)), -- cyan
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(127, 255, 212)) -- light aqua
+}
+
+local fx7 = Game.ReplicatedStorage.Resources.CrabBeam["Blaswwwt"].dashpunch.Attachment:Clone()
+fx7.Parent = game.Players.LocalPlayer.Character["Torso"]
+for _, child in ipairs(fx7:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+child.Color = aqua -- Change particle color to aqua
+        child:Emit(7) -- Emit STUFF particle
+    end
+end
+task.wait(0.1)
 loadstring(game:HttpGet('https://pastebin.com/raw/NAZhXT91'))()
     end
 end
