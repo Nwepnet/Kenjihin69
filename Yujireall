@@ -837,10 +837,12 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(1.1)
+Anim:AdjustSpeed(1.2)
 task.wait(0.8)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Nuke%20black%20flash'))()
 
+task.wait(0.1)
+loadstring(game:HttpGet('https://pastebin.com/raw/NAZhXT91'))()
     end
 end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed) --ult
