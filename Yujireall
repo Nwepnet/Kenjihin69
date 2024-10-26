@@ -567,7 +567,28 @@ Anim2:AdjustSpeed(0)
 Anim2.TimePosition = startTime
 
 Anim2:AdjustSpeed(1.2)
+local flash = Game.ReplicatedStorage.Resources.KJEffects.DropkickExtra["firstHit"].Attachment:Clone()
+flash.Parent = game.Players.LocalPlayer.Character["Right Leg"]
+for _, child in ipairs(flash:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        child:Emit(7) -- Emit 1 particle
+    end
+end
+task.wait(0.1)
+-- Aqua color sequence (cyan and light blue)
+local aqua = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 255, 255)), -- cyan
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(127, 255, 212)) -- light aqua
+}
 
+local wow1 = game.ReplicatedStorage.Resources.Dragon["Complete"].Part.Debri:Clone()
+wow1.Parent = game.Players.LocalPlayer.Character["Torso"]
+    for _, child in ipairs(wow1:GetChildren()) do
+        if child:IsA("ParticleEmitter") then 
+child.Color = aqua -- Change particle color to aqua
+           child:Emit(6) -- Emit 20 particles
+        end
+    end
     end
 
 end
