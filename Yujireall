@@ -916,7 +916,7 @@ fx7.Parent = game.Players.LocalPlayer.Character["Torso"]
 for _, child in ipairs(fx7:GetChildren()) do
     if child:IsA("ParticleEmitter") then
 child.Color = aqua -- Change particle color to aqua
-        child:Emit(14) -- Emit STUFF particle
+        child:Emit(8) -- Emit STUFF particle
     end
 end
 task.wait(0.1)
