@@ -12,7 +12,7 @@ local function d(e)
         if a:IsA("Attachment") then
             for _, b in ipairs(a:GetChildren()) do
                 if b:IsA("ParticleEmitter") then
-                    b:Emit(1)
+                    b:Emit(2)
                 end
             end
         end
